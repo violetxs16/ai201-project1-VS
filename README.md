@@ -26,14 +26,17 @@
      this repo.
 
      Milestone 5. -->
-The Corpus utilized for the project is called advice threads. This corpus contains 20+ text documents that each contain a question and a answer relating to college life.
+The corpus used for the project is called Advice Threads. This corpus contains 20+ text documents, each of which contains a question and an answer(s) relating to college life.
 
 ## Chunking Strategy
 
-**Chunk size: 100 **
+**Chunk size: 750 **
 **Overlap: 20**
 
-Each document contains a question and several answers to the questions. The chunk size was picked to deliveriately encapsulate the questions and answers all into one single chunk. If each question and answer is its own chunk, the semantic meaning behind an answer will be lost. The original approach was to seperate each question and answer to its own individual chunk. However, it quickly became apparent that the small chunk size would impact the semantic meaning behind the text.  
+Each document contains a question and several answers to the question. The chunk size was picked to deliberately encapsulate the questions and answers all into one single chunk. If each question and answer are seperated into individual chunks, the semantic meaning behind an answer will be lost. The original approach was to separate each question and answer to its own individual chunk. However, it quickly became apparent that the small chunk size would impact the semantic meaning behind the text.
+
+Trial 2:
+The initial chunk size of 100 captured the question correctly, but cut the first response in half. To correctly encapsulate the question and all the answers into one chunk, the size was increased to 750. After chunking the 23 documents in the corupus, 53 chunks were created. The chunk size was increased to 750 to align the number of documents to the chunks created. 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
      reasonable" earns nothing. Point at something you noticed when you read
@@ -55,28 +58,79 @@ Each document contains a question and several answers to the questions. The chun
 
      Milestone 3. -->
 
-**Chunk 1** — source: `` — produced by: ``
+======================================================================
+**Chunk 1**  -  source: thread_bike_commute.txt#0  -  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Is a bike worth it for a 20 minute walk commute?
 
+--- reply 1 (14 votes) ---
+Yeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage — covered bike parking exists at three buildings and is full by 9am at all three.
+
+--- reply 2 (9 votes) ---
+Counterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.
+
+--- reply 3 (22 votes) ---
+Both true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.
+
+--- reply 4 (5 votes) ---
+If you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.
 ```
 ```
+======================================================================
+**Chunk 2**  -  source: thread_first_gen.txt#0  -  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Anything specific for first-generation students?
 
-**Chunk 2** — source: `` — produced by: ``
+--- reply 1 (33 votes) ---
+The advising office has a specific programme and it is genuinely good, but it is opt-in and badly publicised. Ask for it by name.
 
-```
-```
+--- reply 2 (41 votes) ---
+The thing I'd say: the unwritten rules are the hard part, not the coursework. Ask about the unwritten rules explicitly. People are happy to explain them and nobody volunteers them.
 
-**Chunk 3** — source: `` — produced by: ``
+--- reply 3 (16 votes) ---
+Emergency fund for textbooks and travel exists and is not means-tested beyond a short form.
 
-```
-```
+======================================================================
+**Chunk 3**  -  source: thread_laptop_specs.txt#0  -  produced by: chunker.py::split_documents
+======================================================================
+THREAD: How much laptop do I actually need for CS courses?
 
-**Chunk 4** — source: `` — produced by: ``
+--- reply 1 (31 votes) ---
+Less than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.
 
-```
-```
+--- reply 2 (18 votes) ---
+Adding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.
 
-**Chunk 5** — source: `` — produced by: ``
+--- reply 3 (12 votes) ---
+I did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.
 
+======================================================================
+**Chunk 4**  -  source: thread_parking.txt#0  -  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Worth getting a parking permit?
+
+--- reply 1 (15 votes) ---
+West lots sell out in about three days in August. East lot never sells out but it's a 12 minute walk, at which point you might as well have parked on the street.
+
+--- reply 2 (21 votes) ---
+Street parking on Verrill is legal and free and unmarked, which is why half the upper years do it.
+
+--- reply 3 (8 votes) ---
+If you're commuting daily, the west permit is worth the August scramble. Otherwise don't bother.
+
+======================================================================
+**Chunk 5**  -  source: thread_sleep_schedule.txt#0  -  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Everyone says fix your sleep. Does it actually matter?
+
+--- reply 1 (29 votes) ---
+Yes, and the specific thing that helped me was scheduling no classes before 10am rather than trying to become a morning person.
+
+--- reply 2 (37 votes) ---
+The library being open until 2am is a trap. It's a resource, not a schedule.
+
+--- reply 3 (16 votes) ---
+Counselling runs a short workshop on this that is more practical than it sounds. Four sessions, and it's free.
 ```
 ```
 
