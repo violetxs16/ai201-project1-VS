@@ -26,12 +26,14 @@
      this repo.
 
      Milestone 5. -->
+The Corpus utilized for the project is called advice threads. This corpus contains 20+ text documents that each contain a question and a answer relating to college life.
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size: 100 **
+**Overlap: 20**
 
+Each document contains a question and several answers to the questions. The chunk size was picked to deliveriately encapsulate the questions and answers all into one single chunk. If each question and answer is its own chunk, the semantic meaning behind an answer will be lost. The original approach was to seperate each question and answer to its own individual chunk. However, it quickly became apparent that the small chunk size would impact the semantic meaning behind the text.  
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
      reasonable" earns nothing. Point at something you noticed when you read
