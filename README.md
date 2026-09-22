@@ -139,9 +139,11 @@ Counselling runs a short workshop on this that is more practical than it sounds.
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question: How much RAM do I need for my computer science courses?**
 
-**Answer:**
+Source: `thread_laptop_specs.txt`
+
+**Answer: You need 16GB of RAM, which is noted as the one number worth paying for.**
 
 ```
 ```
@@ -159,7 +161,16 @@ Counselling runs a short workshop on this that is more practical than it sounds.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+|"Are the add/drop deadline and the withdrawal deadline in different dates?" | Yes | .532 |
+|"How much RAM do I need for my computer science courses?" | Yes | .284 |
+|"Does the campus offer free registration for bikes?" | Yes | .482 |
+|"How often can you change the meal plan tier?" | Yes | .307 |
+|"Does the printing quota roll over between semesters?" | Yes | .343 |
+|"What is the capital of Mongolia?" | No | .933 |
+|"How do I change the oil in a diesel engine?" | No | .930 |
+|"Who won the 1994 World Cup?" | No | .952 |
+|"What is the recommended dosage of ibuprofen for a headache?" | No | .828 |
+|"How do I write a for loop in Rust?" | No | .871 |
 
 ## How I Used AI
 
@@ -172,9 +183,9 @@ Counselling runs a short workshop on this that is more practical than it sounds.
 
      Milestone 5. -->
 
-**1.**
+**1. I used AI to help me diagnoze the problem with my project setup. The virtual environment command was returning an error. The response was to use the following command to start the virtual environment source .venv/Scripts/activate. Following this intial conversation with the AI, every time I start a new terminal for the RAG pipeline, I run the source .venv/Scripts/activate command.**
 
-**2.**
+**2. The second way I used AI was to help me configure Github to Visual Studio Code. The approach given by AI was to logout of the current account then run git push to prompt Github for a new authenthication window. Using that method, I was able to connect Github to Visual Studio Code and push my code to the remote repository.**
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
