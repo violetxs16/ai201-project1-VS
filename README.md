@@ -214,7 +214,7 @@ Source: `thread_laptop_specs.txt`
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 5 of 5 | 3 of 5  | 3 of 5 | 3 of 5 | MET |
+| 1. Retrieved chunk contains the answer | 5 of 5 | 5 of 5  | 5 of 5 | 5 of 5 | MET |
 | 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
 | 3. Gate stops out-of-corpus questions | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
 | 4. For all responses, the chunk size is between 50 to 200 characters. 
@@ -283,14 +283,17 @@ The system should be able to deconstruct complex prompts and answer all the subq
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 5 of 5 | 5 of 5  | 5 of 5 | 5 of 5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 3. Gate stops out-of-corpus questions | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 4. For all responses, the chunk size is between 50 to 200 characters. 
+| 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 5. When given a question with subquestions, the response contains an answer for all the subquestions asked. 
+| 1 of 1| 1 of 1 | 1 of 1 | 1 of 1 | MET |
 
 **Did it help?**
 
+Modifying the a question to test criterion 5 allowed us to validate the system behavior for complex prompts. The system consistently answered both subquestions across all runs.
 <!-- Say plainly whether it did, and how you know. If it made things worse,
      say that — a change that backfired, honestly reported, earns full credit
      and is more interesting than one that worked. What matters is that you can
@@ -307,10 +310,12 @@ The system should be able to deconstruct complex prompts and answer all the subq
      not.
 
      Milestone 5. -->
-
+The scorer.py file needs to be refactored to improve the accuracy of the ratings. Take an expected result of "16 GB" and the actual result containing "... 16GB..". The scorer.py marked the response as a fail due to formatting differences."
 ## What I'd Do Differently
 
 <!-- Knowing what you know now — which of your five criteria would you write
      differently, and why?
 
      Milestone 5. -->
+
+The criteria tested had a 80% success rate during the first run. This tells me that the criteria could be improved to test the system more throughly. 

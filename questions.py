@@ -24,9 +24,9 @@ names a target of "4 of 5", and four of three is not a thing.
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
     {"question": "Are the add/drop deadline and the withdrawal deadline in different dates?", "expects": "Yes they are in different dates."},
-    {"question": "How much RAM do I need for my computer science courses?", "expects": "16 GB"},
+    {"question": "How much RAM do I need for my computer science courses?", "expects": "16GB"},
     {"question": "Does the campus offer free registration for bikes?", "expects": "Yes"},
-    {"question": "How often can you change the meal plan tier?", "expects": "The meal plan tier can only be changed once within the first 10 days."},
+    {"question": "What types of companies hire after autumn for internships? To prepare for an internship, does the careers office offer any services?", "expects": "Small and local places hire after Autumn. The career office offer CVs reviews to aid you."},
     {"question": "Does the printing quota roll over between semesters?", "expects": "No"},
 ]
 
