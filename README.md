@@ -268,9 +268,11 @@ Source: `thread_laptop_specs.txt`
 ## The Improvement
 
 **What I changed:**
+
 Changed the test questions to validate the behavior of criterion 5.
 
 **Why I picked it:**
+
 The system should be able to deconstruct complex prompts and answer all the subquestions within it. By changing the test question to actually test this behavior, we are validating an important part of our system.
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
@@ -294,6 +296,7 @@ The system should be able to deconstruct complex prompts and answer all the subq
 **Did it help?**
 
 Modifying the a question to test criterion 5 allowed us to validate the system behavior for complex prompts. The system consistently answered both subquestions across all runs.
+
 <!-- Say plainly whether it did, and how you know. If it made things worse,
      say that — a change that backfired, honestly reported, earns full credit
      and is more interesting than one that worked. What matters is that you can
@@ -310,7 +313,9 @@ Modifying the a question to test criterion 5 allowed us to validate the system b
      not.
 
      Milestone 5. -->
+
 The scorer.py file needs to be refactored to improve the accuracy of the ratings. Take an expected result of "16 GB" and the actual result containing "... 16GB..". The scorer.py marked the response as a fail due to formatting differences."
+
 ## What I'd Do Differently
 
 <!-- Knowing what you know now — which of your five criteria would you write
