@@ -214,11 +214,13 @@ Source: `thread_laptop_specs.txt`
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 5 of 5 | 3 of 5  | 3 of 5 | 3 of 5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 3. Gate stops out-of-corpus questions | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 4. For all responses, the chunk size is between 50 to 200 characters. 
+| 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 5. When given a question with subquestions, the response contains an answer for all the subquestions asked. 
+| 1 of 1| 0 of 1 | 0 of 1 | 0 of 1 | MISSED |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
@@ -237,11 +239,11 @@ Source: `thread_laptop_specs.txt`
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Retrieved chunk contains the answer | MET | The scorer marked two responses as fail due to a formatting error in the expected results. The retreived chunk for all questions was correct.  |
+| 2 | Every answer names a source | MET | All responses contain a source as part of the output |
+| 3 | Gate stops out-of-corpus questions | MET | None of the out-of-courpus questions were correctly refused by the system. |
+| 4 | For all responses, the chunk size is between 50 to 200 characters | MET | All responses were checked for their chunk size. Because of this manual validation, all responses were confirmed to be within the 50 to 200 character size. |
+| 5 | When given a question with subquestions, the response contains an answer for all the subquestions asked | BROKEN | The original 5 test questions did not contain any subquestions to test this behavior.  |
 
 ## Diagnoses
 
