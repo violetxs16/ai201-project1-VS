@@ -268,8 +268,10 @@ Source: `thread_laptop_specs.txt`
 ## The Improvement
 
 **What I changed:**
+Changed the test questions to validate the behavior of criterion 5.
 
 **Why I picked it:**
+The system should be able to deconstruct complex prompts and answer all the subquestions within it. By changing the test question to actually test this behavior, we are validating an important part of our system.
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
